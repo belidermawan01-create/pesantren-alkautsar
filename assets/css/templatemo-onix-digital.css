@@ -881,14 +881,15 @@ Banner Style
 
 .main-banner:before {
   content: '';
-  background-image: url(../images/juara_mtq.png);
+  background-image: url(../images/piala3.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   right: 0;
   top: 100px;
-  width: 819px;
+  width: 609px;
   height: 674px;
+  margin-right: 80px;
 }
 
 .main-banner .item {

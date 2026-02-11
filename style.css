@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  background: #eee;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* WRAPPER */
+.ppdb-wrapper {
+  max-width: 1400px;
+  margin: auto;
+  background: #fff;
+}
+
+/* PANEL UMUM */
+.left-panel,
+.right-panel {
+  background: linear-gradient(180deg, #4b0ca3, #7a1fcf);
+  min-height: 100vh;
+}
+
+.middle-panel {
+  background: #ffffff;
+}
+
+/* KIRI */
+.year-badge {
+  background: #facc15;
+  color: #000;
+  font-weight: bold;
+  padding: 6px 15px;
+  display: inline-block;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+.beasiswa-box {
+  background: #facc15;
+  color: #000;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.beasiswa-box span {
+  color: #5b21b6;
+}
+
+.ppdb-big {
+  font-size: 72px;
+  font-weight: 900;
+  color: #facc15;
+}
+
+.year-big {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* TENGAH */
+.title-middle {
+  border-bottom: 4px solid #5b21b6;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.program-unggulan {
+  background: #5b21b6;
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+  margin: 25px 0 10px;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+/* KANAN */
+.batas-daftar {
+  background: #facc15;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.batas-daftar span {
+  font-size: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .left-panel,
+  .right-panel {
+    min-height: auto;
+  }
+
+  .ppdb-big {
+    font-size: 56px;
+  }
+}

@@ -10,11 +10,18 @@
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>Onix Digital Marketing HTML5 Template</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/alkautsar.png">
+    <title>Pesantren Al Kautsar</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+    
+
 
 
     <!-- Additional CSS Files -->
@@ -29,6 +36,31 @@ TemplateMo 565 Onix Digital
 https://templatemo.com/tm-565-onix-digital
 
 -->
+<style>
+  .owl-portfolio .thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;          /* atur tinggi card (bebas) */
+  overflow: hidden;
+  border-radius: 12px;    
+}
+
+/* Besar ikon Quran di tengah card */
+.card .fa-book-quran {
+    font-size: 60px; /* Bisa disesuaikan sesuai kebutuhan */
+    color: #ff6b6b; /* Contoh warna, bisa diganti */
+}
+
+
+.owl-portfolio .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* INI KUNCINYA */
+  object-position: center;
+  display: block;
+}
+
+</style>
   </head>
 
 <body>
@@ -54,7 +86,7 @@ https://templatemo.com/tm-565-onix-digital
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <img style="width: 80px;" src="assets/images/alkautsar.png">
+              <img style="width: 250px; height: 120px;"  src="assets/images/LOGO_KAUTSAR.png">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
@@ -62,10 +94,10 @@ https://templatemo.com/tm-565-onix-digital
               <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
               <li class="scroll-to-section"><a href="#services">Pelajaran</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
-              <li class="scroll-to-section"><a href="#video">Videos</a></li> 
-              <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Contact Us Now</a></div></li> 
+              <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
+              <li class="scroll-to-section"><a href="beritaTerbaru.html">Berita
+                 <span class="badge bg-danger ms-0 ">New</span></a></li> 
+              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Pemberitahuan Baru</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
@@ -87,10 +119,10 @@ https://templatemo.com/tm-565-onix-digital
               <div class="owl-carousel owl-banner">
                 <div class="item header-text">
                   <h6>Selamat datang di ma`had al-kautsar</h6>
-                  <h2>Buat<em> Prestasimu</em> di ma`had <span>Al-Kautsar</span></h2>
+                  <h2>Buat<em> Prestasimu</em> di ma`had <span style="color: rgb(212, 172, 10);">Al-Kautsar</span></h2>
                   <p>JL ZENSUNNA, Talang Klp., Kec. Alang-Alang Lebar, Kota Palembang, Sumatera Selatan 30153</p>
                   <div class="down-buttons">
-                    <div class="main-blue-button-hover">
+                    <div class="main-red-button-hover">
                       <a href="https://www.instagram.com/ponpes_alkautsarpalembang/">Kunjungi Sekarang</a>
                     </div>
                     <!-- <div class="call-button">
@@ -126,29 +158,31 @@ https://templatemo.com/tm-565-onix-digital
         <div class="col-lg-12">
           <div class="owl-carousel owl-services">
             <div class="item">
-              <h4>Learn More about our Guidelines</h4>
-              <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
-              <p>Feel free to use this template for your business</p>
+              <h4>Tahsin dan Tahfidz Al-Qur’an bersanad</h4>
+              <div style="font-size: 50px;" class="icon"><i class="fa-solid fa-book-quran"></i></div>
+              <p>Belajar Tahsin & Tahfidz Al-Qur’an dengan metode bersanad
+</p>
             </div>
             <div class="item">
-              <h4>Develop The Best Strategy for Business</h4>
-              <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
-              <p>Get to know more about the topic in details</p>
+              <h4>Mampu berbahasa Arab aktif</h4>
+              <div style="font-size: 50px;" class="icon"><span style="font-family: 'Amiri', serif;">عربي</span>
+           </div>
+              <p>Meningkatkan komunikasi yang baik dengan berbahasa arab</p>
             </div>
             <div class="item">
-              <h4>UI / UX Design and Development</h4>
-              <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
-              <p>Get to know more about the topic in details</p>
+              <h4>Mampu berbahasa inggris aktif</h4>
+              <div style="font-size: 50px;" class="icon"><i class="fa-solid fa-language"></i></div>
+              <p>Meningkatkan komunikasi yang baik dengan berbahasa inggris</p>
             </div>
             <div class="item">
-              <h4>Discover &amp; Explore our SEO Tips</h4>
-              <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
-              <p>Feel free to use this template for your business</p>
+              <h4>Meningkatkan Life skill dan prestasi</h4>
+              <div style="font-size: 50px;" class="icon"><i class="fa-solid fa-brain"></i></div>
+              <p>Meningkatkan komunikasi yang baik dengan berbahasa inggris</p>
             </div>
             <div class="item">
-              <h4>Optimizing your websites for Speed</h4>
-              <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
-              <p>Get to know more about the topic in details</p>
+              <h4>Pembelajaran  Nahwu & Shorof</h4>
+              <div style="font-size: 50px;" class="icon">ناهو</div>
+              <p>kemampuan membaca dan menulis bahasa Arab dengan benar</p>
             </div>
             <div class="item">
               <h4>See The Strategy In The Market</h4>
@@ -196,7 +230,7 @@ https://templatemo.com/tm-565-onix-digital
       <div class="row">
         <div class="col-lg-6 align-self-center">
           <div class="left-image">
-            <img src="assets/images/about-left-image.png" alt="Two Girls working together">
+            <img src="assets/images/ust_somad.png" alt="Two Girls working together">
           </div>
         </div>
         <div class="col-lg-6">
@@ -255,7 +289,7 @@ https://templatemo.com/tm-565-onix-digital
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading">
-            <h2>Our Recent <em>Projects</em> &amp; Case Studies <span>for Clients</span></h2>
+            <h2>Profil <em>AL KAUTSAR</em> &amp;<br> Daftar Prestasi <span>Para Santri</span></h2>
             <span>Our Portfolio</span>
           </div>
         </div>
@@ -267,22 +301,22 @@ https://templatemo.com/tm-565-onix-digital
           <div class="owl-carousel owl-portfolio">
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-01.jpg" alt="">
+                <img src="assets/images/card1.jpeg" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a rel="sponsored" href="https://templatemo.com/tm-564-plot-listing" target="_parent"><h4>First Project</h4></a>
-                    <span>Plot Listing</span>
+                    <a rel="sponsored" href="https://templatemo.com/tm-564-plot-listing" target="_parent"><h4>Juara 2 Fahmil Qur`an</h4></a>
+                    <span>TINGKAT NASIONAL</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-02.jpg" alt="">
+                <img src="assets/images/card2.jpeg" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a href="#"><h4>Project Two</h4></a>
-                    <span>SEO &amp; Marketing</span>
+                    <a href="#"><h4>Santri AL Kautsar</h4></a>
+                    <span>MENDAPATKAN HADIA UMROH</span>
                   </div>
                 </div>
               </div>
@@ -734,8 +768,8 @@ https://templatemo.com/tm-565-onix-digital
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
 
-  <script>
-  // Acc
+   <script> 
+
     $(document).on("click", ".naccs .menu div", function() {
       var numberIndex = $(this).index();
 
@@ -752,6 +786,59 @@ https://templatemo.com/tm-565-onix-digital
           $(".naccs ul").height(listItemHeight + "px");
         }
     });
-  </script>
+  </script> 
+<!-- <script>
+$(document).ready(function () {
+
+  /* ==============================
+     FIX ERROR ./beritaTerbaru.html
+     ============================== */
+  $(document).on("click", "a", function (e) {
+    var href = $(this).attr("href");
+
+    // abaikan link kosong / javascript
+    if (!href || href === "#" || href.startsWith("javascript")) {
+      e.preventDefault();
+      return;
+    }
+
+    // kalau ID selector (#section)
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      $("html, body").animate({
+        scrollTop: $(href).offset().top - 70
+      }, 600);
+      return;
+    }
+
+    // kalau file HTML → biarin pindah halaman NORMAL
+    if (href.endsWith(".html")) {
+      window.location.href = href;
+      return;
+    }
+  });
+
+
+  /* ==============================
+     SCRIPT NACC (PUNYA KAMU)
+     ============================== */
+  $(document).on("click", ".naccs .menu div", function () {
+    var numberIndex = $(this).index();
+
+    if (!$(this).hasClass("active")) {
+      $(".naccs .menu div").removeClass("active");
+      $(".naccs ul li").removeClass("active");
+
+      $(this).addClass("active");
+      $(".naccs ul li:eq(" + numberIndex + ")").addClass("active");
+
+      var listItemHeight = $(".naccs ul li:eq(" + numberIndex + ")").innerHeight();
+      $(".naccs ul").height(listItemHeight + "px");
+    }
+  });
+
+});
+</script> -->
+
 </body>
 </html>

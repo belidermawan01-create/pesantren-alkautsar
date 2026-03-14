@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/alkautsar.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/kausarr.png">
     <title>Pesantren Al Kautsar</title>
 
     <!-- Bootstrap core CSS -->
@@ -40,32 +40,120 @@ https://templatemo.com/tm-565-onix-digital
   .owl-portfolio .thumb {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;          /* atur tinggi card (bebas) */
+  aspect-ratio: 4 / 5;          
   overflow: hidden;
   border-radius: 12px;    
 }
 
-/* Besar ikon Quran di tengah card */
 .card .fa-book-quran {
-    font-size: 60px; /* Bisa disesuaikan sesuai kebutuhan */
-    color: #ff6b6b; /* Contoh warna, bisa diganti */
+    font-size: 60px; 
+    color: #ff6b6b;
 }
 
 
 .owl-portfolio .thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* INI KUNCINYA */
+  object-fit: cover;   
   object-position: center;
   display: block;
 }
+
+.project-container{
+display:flex;
+gap:30px;
+}
+
+.video-section{
+position:relative;
+width:70%;
+}
+
+.video-section iframe{
+width:100%;
+height:420px;
+border-radius:20px;
+}
+
+.video-label{
+position:absolute;
+top:20px;
+left:20px;
+background:#ff6f61;
+color:white;
+padding:18px;
+border-radius:12px;
+}
+
+.project-list{
+width:30%;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.project-card{
+height:90px;
+background:#eaeaea;
+border-radius:18px;
+position:relative;
+}
+
+.project-card.main{
+background:#ff6f61;
+color:white;
+height:110px;
+}
+
+.card-text{
+position:absolute;
+top:15px;
+left:20px;
+}
+
+.program-card{
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.program-card img{
+  height:200px;
+  object-fit:cover;
+  transition:0.3s;
+}
+
+.program-card:hover img{
+  transform:scale(1.1);
+}
+
+.program-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.icon-box{
+  width:60px;
+  height:60px;
+  background:#198754;
+  color:white;
+  font-size:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  margin:auto;
+  margin-top:-40px;
+  position:relative;
+  border:4px solid white;
+}
+
 
 </style>
   </head>
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
@@ -76,39 +164,49 @@ https://templatemo.com/tm-565-onix-digital
       </div>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
+  <header class="header-area header-sticky wow slideInDown" 
+        data-wow-duration="0.75s" 
+        data-wow-delay="0s">
 
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <img style="width: 250px; height: 120px;"  src="assets/images/LOGO_KAUTSAR.png">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#services">Pelajaran</a></li>
-              <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
-              <li class="scroll-to-section"><a href="beritaTerbaru.html">Berita
-                 <span class="badge bg-danger ms-0 ">New</span></a></li> 
-              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Pemberitahuan Baru</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <img 
+              src="assets/images/LOGO_KAUTSAR.png" 
+              alt="Logo Al-Kautsar"
+              style="width: 250px; height: 120px; object-fit: contain;"
+            >
+          </a>
+
+          <!-- Menu -->
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#pelajaran">Pelajaran</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="./pendaftaran.html">Pendaftaran</a></li>
+            <li>
+              <div class="main-red-button-hover">
+                <a href="./beritaTerbaru.html">Berita Terbaru</a>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu -->
+          <a class="menu-trigger">
+            <span>Menu</span>
+          </a>
+
+        </nav>
       </div>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+  </div>
+</header>
+
 
   <div class="main-banner" id="top">
     <div class="container">
@@ -119,11 +217,11 @@ https://templatemo.com/tm-565-onix-digital
               <div class="owl-carousel owl-banner">
                 <div class="item header-text">
                   <h6>Selamat datang di ma`had al-kautsar</h6>
-                  <h2>Buat<em> Prestasimu</em> di ma`had <span style="color: rgb(212, 172, 10);">Al-Kautsar</span></h2>
+                  <h2>Ciptakan<em> Prestasimu</em> di ma`had <span style="color: rgb(212, 172, 10);">Al-Kautsar</span></h2>
                   <p>JL ZENSUNNA, Talang Klp., Kec. Alang-Alang Lebar, Kota Palembang, Sumatera Selatan 30153</p>
                   <div class="down-buttons">
                     <div class="main-red-button-hover">
-                      <a href="https://www.instagram.com/ponpes_alkautsarpalembang/">Kunjungi Sekarang</a>
+                      <a href="./pendaftaran.html">Informasi Pendaftaran</a>
                     </div>
                     <!-- <div class="call-button">
                       <a href="#"><i class="fa fa-phone"></i> 010-020-0340</a>
@@ -138,93 +236,246 @@ https://templatemo.com/tm-565-onix-digital
     </div>
   </div>
 
-  <div id="services" class="our-services section">
-    <div class="services-right-dec">
-      <img src="assets/images/services-right-dec.png" alt="">
-    </div>
-    <div class="container">
-      <div class="services-left-dec">
-        <img src="assets/images/services-left-dec.png" alt="">
+<div class="container-fluid pt-5 pb-5  text-light">
+  <div class="container text-center">
+
+    <h2 class="display-4 text-dark" id="staff"
+        style="font-weight:700; letter-spacing:1px; font-family:'Segoe UI', sans-serif;">
+        STRUKTUR KEPENGURUSAN
+    </h2>
+
+    <p class="mt-3 mb-4 text-dark" style=" font-size:16px;">
+      Hubungi staff kami jika Anda membutuhkan bantuan atau informasi lebih lanjut mengenai pesantren.
+    </p>
+
+    <div class="row pt-4 gx-4 gy-4">
+
+      <!-- Staff 1 -->
+      <div class="col-md-4 text-center">
+        <img src="./assets/images/mudir.png"
+          class="rounded-circle img-fluid"
+          style="width:200px; height:200px; object-fit:cover; border:4px solid #ffffff20; box-shadow:0 8px 20px rgba(0,0,0,0.4);" />
+
+        <h5 class="mt-3 text-dark"
+            style="font-weight:600; font-family:'Segoe UI', sans-serif;">
+          KH. Iskandar Zulakarnaen, Lc., M.Ag
+        </h5>
+
+        <p class="text-dark" style=" font-size:14px;">
+          Mudir Ma`had Al-Kautsar <br><br>
+
+          <a href="https://web.whatsapp.com/" style="color:#25D366; font-size:18px; margin:0 8px;" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href="https://www.instagram.com/ahmad_iskandarzulkarnaen/"
+             style="color:#E1306C; font-size:18px; margin:0 8px;" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/faza.atamma?locale=id_ID"
+             style="color:#1877F2; font-size:18px; margin:0 8px;" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </p>
       </div>
-      <div class="row">
+
+      <!-- Staff 2 -->
+      <div class="col-md-4 text-center">
+        <img src="./assets/images/ust_ambo.png"
+          class="rounded-circle img-fluid"
+          style="width:200px; height:200px; object-fit:cover; border:4px solid #ffffff20; box-shadow:0 8px 20px rgba(0,0,0,0.4);" />
+
+        <h5 class="mt-3 text-dark"
+            style="font-weight:600; font-family:'Segoe UI', sans-serif;">
+           Ustadz Ambo Upe, S.Pd.I
+        </h5>
+
+        <p class="text-dark" style=" font-size:14px;">
+          Wakil Mudir Ma`had Al-Kautsar <br><br>
+
+          <a href="" style="color:#25D366; font-size:18px; margin:0 8px;">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href=""
+             style="color:#E1306C; font-size:18px; margin:0 8px;">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href=""
+             style="color:#1877F2; font-size:18px; margin:0 8px;">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </p>
+      </div>
+
+      <!-- Staff 3 -->
+      <div class="col-md-4 text-center">
+        <img src="./assets/images/ustSamsul.jpg"
+          class="rounded-circle img-fluid"
+          style="width:200px; height:200px; object-fit:cover; border:4px solid #ffffff20; box-shadow:0 8px 20px rgba(0,0,0,0.4);" />
+
+        <h5 class="mt-3 text-dark"
+            style="font-weight:600; font-family:'Segoe UI', sans-serif;">
+          Ustadz Samsul Amirudin, S.pd
+        </h5>
+
+        <p class="text-dark" style=" font-size:14px;">
+          Kepala Sekolah Smp Al-Kautsar <br><br>
+
+          <a href="https://web.whatsapp.com/" style="color:#25D366; font-size:18px; margin:0 8px;">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href="https://www.instagram.com/samsulamirudin3/"
+             style="color:#E1306C; font-size:18px; margin:0 8px;" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/faza.atamma?locale=id_ID"
+             style="color:#1877F2; font-size:18px; margin:0 8px;">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <div id="services" class="our-services section">
+    
+
+  <!-- djfnkj -->
+   <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading">
-            <h2>Daftar <em>Pelajaran</em> Utama di ma`had <span>Al-kautsar</span></h2>
+            <h2 id="pelajaran">Daftar <em>Pelajaran</em> Utama di ma`had <span>Al-kautsar</span></h2>
             <span>all lessons</span>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-carousel owl-services">
-            <div class="item">
-              <h4>Tahsin dan Tahfidz Al-Qur’an bersanad</h4>
-              <div style="font-size: 50px;" class="icon"><i class="fa-solid fa-book-quran"></i></div>
-              <p>Belajar Tahsin & Tahfidz Al-Qur’an dengan metode bersanad
-</p>
-            </div>
-            <div class="item">
-              <h4>Mampu berbahasa Arab aktif</h4>
-              <div style="font-size: 50px;" class="icon"><span style="font-family: 'Amiri', serif;">عربي</span>
-           </div>
-              <p>Meningkatkan komunikasi yang baik dengan berbahasa arab</p>
-            </div>
-            <div class="item">
-              <h4>Mampu berbahasa inggris aktif</h4>
-              <div style="font-size: 50px;" class="icon"><i class="fa-solid fa-language"></i></div>
-              <p>Meningkatkan komunikasi yang baik dengan berbahasa inggris</p>
-            </div>
-            <div class="item">
-              <h4>Meningkatkan Life skill dan prestasi</h4>
-              <div style="font-size: 50px;" class="icon"><i class="fa-solid fa-brain"></i></div>
-              <p>Meningkatkan komunikasi yang baik dengan berbahasa inggris</p>
-            </div>
-            <div class="item">
-              <h4>Pembelajaran  Nahwu & Shorof</h4>
-              <div style="font-size: 50px;" class="icon">ناهو</div>
-              <p>kemampuan membaca dan menulis bahasa Arab dengan benar</p>
-            </div>
-            <div class="item">
-              <h4>See The Strategy In The Market</h4>
-              <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
-              <p>Get to know more about the topic in details</p>
-            </div>
-            <div class="item">
-              <h4>Best Content Ideas for your pages</h4>
-              <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
-              <p>Feel free to use this template for your business</p>
-            </div>
-            <div class="item">
-              <h4>Optimizing Speed for your web pages</h4>
-              <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
-              <p>Get to know more about the topic in details</p>
-            </div>
-            <div class="item">
-              <h4>Accessibility for mobile viewing</h4>
-              <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
-              <p>Get to know more about the topic in details</p>
-            </div>
-            <div class="item">
-              <h4>Content Ideas for your next project</h4>
-              <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
-              <p>Feel free to use this template for your business</p>
-            </div>
-            <div class="item">
-              <h4>UI &amp; UX Design &amp; Development</h4>
-              <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
-              <p>Get to know more about the topic in details</p>
-            </div>
-            <div class="item">
-              <h4>Discover the digital marketing trend</h4>
-              <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
-              <p>Get to know more about the topic in details</p>
-            </div>
-          </div>
+   <div class="container py-5">
+  <div class="row g-4">
+
+    <!-- Pelajaran Formal -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card program-card border-0 shadow-sm">
+        <img src="./assets/images/1.webp" class="card-img-top" alt="">
+        <div class="card-body text-center">
+          <div class="icon-box">📚</div>
+          <h5 class="card-title mt-3">PELAJARAN SEKOLAH FORMAL</h5>
         </div>
+         <p class="bg-dark text-white ps-2">
+            Mata pelajaran umum seperti Matematika, IPA, IPS dan lainnya sesuai kurikulum pendidikan.
+          </p>
+      </div>
+    </div>
+
+    <!-- Tahsin Tahfidz -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card program-card border-0 shadow-sm">
+        <img src="./assets/images/tahsindanhadis.jpeg" class="card-img-top" alt="">
+        <div class="card-body text-center">
+          <div class="icon-box">📖</div>
+          <h5 class="card-title mt-3">TAHSIN & TAHFIDZ AL-QUR`AN</h5>
+          </div>
+          <p class="bg-dark text-white ps-2">
+            Program memperbaiki bacaan Al-Qur'an dan menghafal dengan sanad yang terpercaya.
+          </p>
+      </div>
+    </div>
+
+    <!-- Hadis -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card program-card border-0 shadow-sm">
+        <img class="border" src="./assets/images/hadis.jpg" class="card-img-top" alt="">
+        <div class="card-body text-center">
+          <div class="icon-box">🕌</div>
+          <h5 class="card-title mt-3">HADIS BERSANAD</h5>
+        </div>
+        <p class="bg-dark text-white ps-2">
+            Pembelajaran hadis dengan sanad yang jelas untuk memahami ajaran baginda Rasulullah.
+          </p>
+      </div>
+    </div>
+
+    <!-- Bahasa Inggris -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card program-card border-0 shadow-sm">
+        <img src="./assets/images/inggris.jpg" class="card-img-top" alt="">
+        <div class="card-body text-center">
+          <div class="icon-box">🌍</div>
+          <h5 class="card-title mt-3">Bahasa Inggris Aktif</h5>
+        </div>
+          <p class="bg-dark text-white ps-2">
+            Siswa dilatih untuk menggunakan bahasa Inggris secara aktif dalam komunikasi sehari-hari.
+          </p>
+      </div>
+    </div>
+
+    <!-- Bahasa Arab -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card program-card border-0 shadow-sm">
+        <img src="./assets/images/arab.webp" class="card-img-top" alt="">
+        <div class="card-body text-center">
+          <div class="icon-box">🌍</div>
+          <h5 class="card-title mt-3">Bahasa Arab Aktif</h5>
+        </div>
+          <p class="bg-dark text-white ps-2">
+            Siswa dilatih untuk menggunakan bahasa Arab secara aktif dalam komunikasi sehari-hari.
+          </p>
+      </div>
+    </div>
+
+    <!-- Nahwu sorof -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card program-card border-0 shadow-sm">
+        <img src="./assets/images/nahwu.jpg" class="card-img-top" alt="">
+        <div class="card-body text-center">
+          <div class="icon-box">🌍</div>
+          <h5 class="card-title mt-3">Pembelajaran  Nahwu & Shorof</h5>
+        </div>
+          <p class="bg-dark text-white ps-2">
+            Siswa dilatih untuk kemampuan membaca dan menulis bahasa Arab dengan benar.
+          </p>
+      </div>
+    </div>
+
+    <!-- Bela Diri -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card program-card border-0 shadow-sm">
+        <img class="border" src="./assets/images/silat.webp" class="card-img-top" alt="">
+        <div class="card-body text-center">
+          <div class="icon-box">🥋</div>
+          <h5 class="card-title mt-3">BELA DIRI</h5>
+        </div>
+        <p class="bg-dark text-white ps-2">
+            Melatih kekuatan fisik, kedisiplinan dan mental siswa  yang tangguh melalui latihan bela diri.
+          </p>
+      </div>
+    </div>
+
+    <!-- Life Skill-->
+    <div class="col-md-6 col-lg-4">
+      <div class="card program-card border-0 shadow-sm">
+        <img class="border" src="./assets/images/hadis.jpg" class="card-img-top" alt="">
+        <div class="card-body text-center">
+          <div class="icon-box">🕌</div>
+          <h5 class="card-title mt-3">MENINGKATKAN LIFE SKILL DAN PRESTASI</h5>
+        </div>
+        <p class="bg-dark text-white ps-2">
+            Siswa dibimbing untuk mengembangkan keterampilan hidup, kepemimpinan, serta meraih prestasi di bidang akademik maupun non-akademik
+          </p>
       </div>
     </div>
   </div>
-
+</div>
+ </div>
+  </div>
   <div id="about" class="about-us section">
     <div class="container">
       <div class="row">
@@ -235,46 +486,9 @@ https://templatemo.com/tm-565-onix-digital
         </div>
         <div class="col-lg-6">
           <div class="section-heading">
-            <h2>Grow your website with our <em>SEO Tools</em> &amp; <span>Project</span> Management</h2>
-            <p>You can browse free HTML templates on Too CSS website. Visit the website and explore latest website templates for your projects.</p>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="fact-item">
-                  <div class="count-area-content">
-                    <div class="icon">
-                      <img src="assets/images/service-icon-01.png" alt="">
-                    </div>
-                    <div class="count-digit">320</div>
-                    <div class="count-title">SEO Projects</div>
-                    <p>Lorem ipsum dolor sitti amet, consectetur.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="fact-item">
-                  <div class="count-area-content">
-                    <div class="icon">
-                      <img src="assets/images/service-icon-02.png" alt="">
-                    </div>
-                    <div class="count-digit">640</div>
-                    <div class="count-title">Websites</div>
-                    <p>Lorem ipsum dolor sitti amet, consectetur.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="fact-item">
-                  <div class="count-area-content">
-                    <div class="icon">
-                      <img src="assets/images/service-icon-03.png" alt="">
-                    </div>
-                    <div class="count-digit">120</div>
-                    <div class="count-title">Satisfied Clients</div>
-                    <p>Lorem ipsum dolor sitti amet, consectetur.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h2 id="about">Profil Tentang  <span>Sejarah</span> &amp; Berdirinya  <em>ALKAUTSAR</em> </h2>
+            <p>" Diresmikan oleh ust Abdussomad dan wali kota palembang ". Pondok Pesantren Al-Kautsar didirikan pada tahun 2019 di Palembang dengan visi untuk menjadi pusat pendidikan Islam yang unggul dalam penguasaan ilmu agama (tafaqquh fiddin) dan ilmu pengetahuan umum. Nama Al-Kautsar sendiri diambil dari Al-Qur'an, yang bermakna "Nikmat yang Melimpah", sebagai harapan agar ilmu dan keberkahan yang diperoleh santri selalu melimpah ruah.</p>
+           
           </div>
         </div>
       </div>
@@ -323,32 +537,32 @@ https://templatemo.com/tm-565-onix-digital
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-03.jpg" alt="">
+                <img src="assets/images/syarhilPutra.jpeg" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a rel="sponsored" href="https://templatemo.com/tm-562-space-dynamic" target="_parent"><h4>Third Project</h4></a>
-                    <span>Space Dynamic SEO</span>
+                    <a rel="sponsored" href="https://templatemo.com/tm-562-space-dynamic" target="_parent"><h4>Juara 2 Syarhil Quran</h4></a>
+                    <span>TINGKAT PROVINSI</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-04.jpg" alt="">
+                <img src="assets/images/ktiq.jpeg" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a href="#"><h4>Project Four</h4></a>
-                    <span>Website Marketing</span>
+                    <a href="#"><h4>Juara 1 Ktiq Putra & Putri</h4></a>
+                    <span>TINGKAT PROVINSI</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-01.jpg" alt="">
+                <img src="assets/images/babaUstSomad.jpeg" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a href="#"><h4>Fifth Project</h4></a>
+                    <a href="#"><h4>Bersama UAS</h4></a>
                     <span>Digital Assets</span>
                   </div>
                 </div>
@@ -356,77 +570,77 @@ https://templatemo.com/tm-565-onix-digital
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-02.jpg" alt="">
+                <img src="assets/images/dira.jpeg" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a href="#"><h4>Sixth Project</h4></a>
-                    <span>SEO &amp; Marketing</span>
+                    <a href="#"><h4>Santri AL Kautsar</h4></a>
+                    <span>MENDAPATKAN HADIA UMROH</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-03.jpg" alt="">
+                <img src="assets/images/diraCairo.jpeg" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a href="#"><h4>7th Project</h4></a>
-                    <span>SEO &amp; Marketing</span>
+                    <a href="#"><h4>Santri Al Kautsar</h4></a>
+                    <span>MENDAPATKAN BEASISWA AL AZZAH CAIRO</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-04.jpg" alt="">
+                <img src="assets/images/Wisuda Tahfiz Santri Alkautsar.webp" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a href="#"><h4>8th Project</h4></a>
-                    <span>SEO &amp; Marketing</span>
+                    <a href="#"><h4>Santri Al Kautsar</h4></a>
+                    <span>WISUDAH TAHFIZ JUZ 30 2025</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-01.jpg" alt="">
+                <img src="assets/images/bangbell.png" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a href="#"><h4>9th Project</h4></a>
-                    <span>SEO &amp; Marketing</span>
+                    <a href="#"><h4>Santri Al Kautsar</h4></a>
+                    <span>MENDAPATKAN BEASISWA DI PETIK DEPOK</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-02.jpg" alt="">
+                <img src="assets/images/jefri.jpeg" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a href="#"><h4>Project Ten</h4></a>
-                    <span>SEO &amp; Marketing</span>
+                    <a href="#"><h4>Juara 2 Syarhil Quran</h4></a>
+                    <span>TINGKAT PROVINSI</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-03.jpg" alt="">
+                <img src="assets/images/USTSOMADD.jpeg" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a href="#"><h4>Project Eleven</h4></a>
-                    <span>SEO &amp; Marketing</span>
+                    <a href="#"><h4>Kedatangan UAS</h4></a>
+                    <span>DIPESANTREN ALKAUTSAR</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/portfolio-04.jpg" alt="">
+                <img src="assets/images/walikota.jpeg" alt="">
                 <div class="hover-effect">
                   <div class="inner-content">
-                    <a href="#"><h4>12th Project</h4></a>
-                    <span>SEO &amp; Marketing</span>
+                    <a href="#"><h4>Santri al kautsar</h4></a>
+                    <span>BERSAMA WALI KOTA PALEMBANG</span>
                   </div>
                 </div>
               </div>
@@ -435,206 +649,56 @@ https://templatemo.com/tm-565-onix-digital
         </div>
       </div>
     </div>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus earum aperiam, culpa aliquid aliquam magnam doloremque obcaecati rerum eum, tempore placeat molestiae quod possimus alias. Aspernatur facilis nobis aliquam accusantium illo molestias fugiat. Sapiente cum earum explicabo ea inventore id non suscipit enim! Ipsam deserunt tempora asperiores cupiditate dolorum nisi!
+  </div>
+<br>
+
+<div class="project-container">
+
+  <!-- Video Besar -->
+  <div class="video-section">
+    
+    <div class="video-label">
+      <h3><b> AL-KAUTSAR</b></h3>
+      <p style="color: white;">Bersama Mudir AlKautsar</p>
+    </div>
+
+    
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gS1VTaqtDXU?si=pp-lrbebdSqcj9BP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 
-  <div id="pricing" class="pricing-tables">
-    <div class="tables-left-dec">
-      <img src="assets/images/tables-left-dec.png" alt="">
-    </div>
-    <div class="tables-right-dec">
-      <img src="assets/images/tables-right-dec.png" alt="">
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h2>Select a suitable <em>plan</em> for your next <span>projects</span></h2>
-            <span>Our Plans</span>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="item first-item">
-            <h4>Starter Plan</h4>
-            <em>$160/mo</em>
-            <span>$140</span>
-            <ul>
-              <li>10 Projects</li>
-              <li>100 GB space</li>
-              <li>20 SEO checkups</li>
-              <li>Basic Support</li>
-            </ul>
-            <div class="main-blue-button-hover">
-              <a href="#">Get Started</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="item second-item">
-            <h4>Standard Plan</h4>
-            <em>$240/mo</em>
-            <span>$200</span>
-            <ul>
-              <li>20 Projects</li>
-              <li>200 GB space</li>
-              <li>50 SEO checkups</li>
-              <li>Pro Support</li>
-            </ul>
-            <div class="main-blue-button-hover">
-              <a href="#">Get it Now</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="item third-item">
-            <h4>Advanced Plan</h4>
-            <em>$360/mo</em>
-            <span>$280</span>
-            <ul>
-              <li>30 Projects</li>
-              <li>300 GB space</li>
-              <li>100 SEO checkups</li>
-              <li>Best Support</li>
-            </ul>
-            <div class="main-blue-button-hover">
-              <a href="#">Buy Now</a>
-            </div>
-          </div>
-        </div>
+
+  <!-- List Project Kanan -->
+  <div class="project-list">
+
+    <div class="project-card main">
+      <div class="card-text">
+        <h4><b>AL-KAUTSAR</b></h4>
+        <p style="color: white;">Bersama Mudir AlKautsar</p>
       </div>
     </div>
+
+    <div class="project-card">
+      <div class="card-text">
+        <h4><b>AL-KAUTSAR</b></h4>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-text">
+        <h4><b>AL-KAUTSAR</b></h4>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-text">
+        <h4><b>AL-KAUTSAR</b></h4>
+      </div>
+    </div>
+
   </div>
 
-  <div id="subscribe" class="subscribe">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="inner-content">
-            <div class="row">
-              <div class="col-lg-10 offset-lg-1">
-                <h2>Know Your Website SEO Score by Email</h2>
-                <form id="subscribe" action="" method="get">
-                  <input type="text" name="website" id="website" placeholder="Your Website URL" required="">
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                  <button type="submit" id="form-submit" class="main-button ">Subscribe</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="video" class="our-videos section">
-    <div class="videos-left-dec">
-      <img src="assets/images/videos-left-dec.png" alt="">
-    </div>
-    <div class="videos-right-dec">
-      <img src="assets/images/videos-right-dec.png" alt="">
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="naccs">
-            <div class="grid">
-              <div class="row">
-                <div class="col-lg-8">
-                  <ul class="nacc">
-                    <li class="active">
-                      <div>
-                        <div class="thumb">
-                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/JynGuQx4a1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <div class="overlay-effect">
-                            <a href="#"><h4>Project One</h4></a>
-                            <span>SEO &amp; Marketing</span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="thumb">
-                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/RdJBSFpcO4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <div class="overlay-effect">
-                            <a href="#"><h4>Second Project</h4></a>
-                            <span>Advertising &amp; Marketing</span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="thumb">
-                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/ZlfAjbQiL78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <div class="overlay-effect">
-                            <a href="#"><h4>Project Three</h4></a>
-                            <span>Digital &amp; Marketing</span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="thumb">
-                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/mx1WseE7-0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <div class="overlay-effect">
-                            <a href="#"><h4>Fourth Project</h4></a>
-                            <span>SEO &amp; Advertising</span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-4">
-                  <div class="menu">
-                    <div class="active">
-                      <div class="thumb">
-                        <img src="assets/images/video-thumb-01.png" alt="">
-                        <div class="inner-content">
-                          <h4>Project One</h4>
-                          <span>SEO &amp; Marketing</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <img src="assets/images/video-thumb-02.png" alt="">
-                        <div class="inner-content">
-                          <h4>Second Project</h4>
-                          <span>Advertising &amp; Marketing</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <img src="assets/images/video-thumb-03.png" alt="Marketing">
-                        <div class="inner-content">
-                          <h4>Project Three</h4>
-                          <span>Digital &amp; Marketing</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <img src="assets/images/video-thumb-04.png" alt="SEO Work">
-                        <div class="inner-content">
-                          <h4>Fourth Project</h4>
-                          <span>SEO &amp; Advertising</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>             
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
 
   <div id="contact" class="contact-us section">
     <div class="container">
@@ -643,11 +707,11 @@ https://templatemo.com/tm-565-onix-digital
           <div class="section-heading">
             <h2>Feel free to <em>Contact</em> us via the <span>HTML form</span></h2>
             <div id="map">
-              <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="360px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-            </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.238761880426!2d104.685110367899!3d-2.968650390393735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b75002d86bd89%3A0x4df35ae833a8f885!2sPONPES%20ALKAUTSAR%20PALEMBANG!5e1!3m2!1sid!2sid!4v1773243498092!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div><h3 class="info">Informasi Contact</h3>
             <div class="info">
-              <span><i class="fa fa-phone"></i> <a href="#">010-020-0340<br>090-080-0760</a></span>
-              <span><i class="fa fa-envelope"></i> <a href="#">info@company.com<br>mail@company.com</a></span>
+              <span><i class="fa fa-phone"></i> <a href="#">+62 813-6747-6794<br>+62 822-8034-3420</a></span>
+              <span><i class="fa fa-envelope"></i> <a href="#">alkautsar.plg@gmail.com<br>mail@company.com</a></span>
             </div>
           </div>
         </div>
@@ -696,68 +760,14 @@ https://templatemo.com/tm-565-onix-digital
     <img src="assets/images/footer-dec.png" alt="">
   </div>
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="about footer-item">
-            <div class="logo">
-              <a href="#"><img src="assets/images/logo.png" alt="Onix Digital TemplateMo"></a>
-            </div>
-            <a href="#">info@company.com</a>
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="services footer-item">
-            <h4>Services</h4>
-            <ul>
-              <li><a href="#">SEO Development</a></li>
-              <li><a href="#">Business Growth</a></li>
-              <li><a href="#">Social Media Managment</a></li>
-              <li><a href="#">Website Optimization</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="community footer-item">
-            <h4>Community</h4>
-            <ul>
-              <li><a href="#">Digital Marketing</a></li>
-              <li><a href="#">Business Ideas</a></li>
-              <li><a href="#">Website Checkup</a></li>
-              <li><a href="#">Page Speed Test</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="subscribe-newsletters footer-item">
-            <h4>Subscribe Newsletters</h4>
-            <p>Get our latest news and ideas to your inbox</p>
-            <form action="#" method="get">
-              <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-              <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
-            </form>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="copyright">
-            <p>Copyright © 2021 Onix Digital Co., Ltd. All Rights Reserved. 
-            <br>
-            Designed by <a rel="nofollow" href="https://templatemo.com" title="free CSS templates">TemplateMo</a><br>
-            Distributed by <a href="https://themewagon.com">Themewagon</a>
-          </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </footer>
+  <footer class="bg-dark text-white py-5">
+<div class="container text-center text-white">
+<h5 class=" text-white">Ma'had Al-Kautsar</h5>
+<p class=" text-white">Palembang, Sumatera Selatan</p>
+<p class=" text-white">📞 0812-XXXX-XXXX | 📧 info@alkautsar.sch.id</p>
+<p class=" text-white"class="mt-3">© 2026 Ma'had Al-Kautsar. All Rights Reserved.</p>
+</div>
+</footer>
 
 
   <!-- Scripts -->
